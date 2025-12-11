@@ -1,0 +1,52 @@
+@use "settings" as *;
+@use "mixin" as m;
+
+body {
+    font-family: $font;
+}
+
+header, main {
+    width: $width;
+    max-width: $max-width;
+
+    @if $center{
+        margin: 0 auto;
+    }
+}
+
+p {
+    font-size: $textsize;
+}
+
+@for $i from 1 through length($header-sizes) {
+    h#{$i} {
+        font-size: nth($header-sizes, $i);
+        color: $maincolor;
+    }
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+
+    @include m.btnColors($maincolor, $secondcolor);
+
+    &:active {
+        scale: .85;
+    }
+
+    &.secondary {
+        @include m.btnColors($secondcolor, $maincolor);
+    }
+    &.outline {
+        @include m.btnColors($backgroundcolor, $maincolor);
+        border: 1px solid $maincolor;
+    }
+    &.success {
+        @include m.btnColors(rgb(30, 255, 0), #fff)
+    }
+    &.danger {
+        @include m.btnColors(rgb(183, 20, 20), #fff)
+    }
+}
