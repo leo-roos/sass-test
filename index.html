@@ -7,13 +7,27 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body class="">
-    
+    <nav>
+        <div>
+            <p>One</p>
+        </div>
+        <div>
+            <p>Two</p>
+        </div>
+        <div class="dropdown">
+            <p>Three</p>
+            <div class="items">
+                <p>Three-One</p>
+                <p>Three-Two</p>
+            </div>
+        </div>
+    </nav>
+
     <header class="">
         <h1 class="">Leo Roos</h1>
     </header>
     
     <main>
-        
         <section class="">
             <div class="">
                 <h2>Super bra css</h2>
@@ -79,7 +93,7 @@
         
         <section class="hero">
             <h2>Special Section</h2>
-            <div class="">
+            <div class="rows wrap width-3">
                 <div class="col">
                     <h3>Kolumn 1</h3>
                     <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
@@ -95,10 +109,14 @@
             </div>
         </section>
         
-        <section class="">
-            <h2>Call to Action (CTA)</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button class="">Gör något!</button>
+        <section style="position: relative; margin: 50vh 10vw;">
+            <section class="overlay">
+                <div class="popup">
+                    <h2>Call to Action (CTA)</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn">Gör något!</button>
+                </div>
+            </section>
         </section>
     </main>
     
