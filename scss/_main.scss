@@ -1,5 +1,64 @@
 @use "settings" as *;
+@use "mixin" as m;
+@use "animations" as a;
 
 body {
     background-color: $backgroundcolor;
+}
+
+.animation {
+    padding: 10px;
+    border-radius: 5px;
+}
+.animation:hover {
+    background-color: rgb(162, 162, 162);
+    overflow: hidden;
+}
+
+.slideLeft:hover {
+    img {
+        @include a.slideLeft(1s);
+    }
+}
+.slideUp:hover {
+    img {
+        @include a.slideUp(1s);
+    }
+}
+.slideRight:hover {
+    img {
+        @include a.slideRight(1s);
+    }
+}
+
+.fadeLeft:hover {
+    img {
+        @include a.fadeLeft(1s);
+    }
+}
+.fade:hover {
+    img {
+        @include a.fade(1s);
+    }
+}
+.fadeRight:hover {
+    img {
+        @include a.fadeRight(1s);
+    }
+}
+
+.bounce:hover {
+    img {
+        @include a.bounce(1s);
+    }
+}
+.wiggle:hover {
+    img {
+        @include a.wiggle(1s);
+    }
+}
+.pulse:hover {
+    img {
+        @include a.pulse(1s);
+    }
 }

@@ -5,6 +5,10 @@ body {
     font-family: $font;
 }
 
+img {
+    max-width: 100%;
+}
+
 header, main {
     width: $width;
     max-width: $max-width;
@@ -49,4 +53,26 @@ p {
     &.danger {
         @include m.btnColors(rgb(183, 20, 20), #fff)
     }
+}
+
+.rows {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    &.wrap {
+        flex-wrap: wrap;
+    }
+    @for $i from 1 through 4 {
+        &.width-#{$i} {
+            .col {
+                width: calc(100%/$i - 10px);
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+section {
+    margin-bottom: 50px;
 }

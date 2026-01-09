@@ -1,0 +1,164 @@
+@keyframes SlideLeft {
+    0% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(0%);
+    } 
+}
+
+@keyframes SlideUp {
+    0% {
+        transform: translateY(50%);
+    }
+    100% {
+        transform: translateY(0%);
+    } 
+}
+
+@keyframes SlideRight {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    } 
+}
+
+@mixin slideLeft($dur) {
+    animation-name: SlideLeft;
+    animation-duration: $dur;
+}
+
+@mixin slideUp($dur) {
+    animation-name: SlideUp;
+    animation-duration: $dur;
+}
+
+@mixin slideRight($dur) {
+    animation-name: SlideRight;
+    animation-duration: $dur;
+}
+
+
+@keyframes FadeLeft {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    } 
+}
+
+@keyframes Fade {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes FadeRight {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@mixin fadeLeft($dur) {
+    animation-name: FadeLeft;
+    animation-duration: $dur;
+}
+@mixin fade($dur) {
+    animation-name: Fade;
+    animation-duration: $dur;
+}
+@mixin fadeRight($dur) {
+    animation-name: FadeRight;
+    animation-duration: $dur;
+}
+
+@keyframes Bounce {
+    0% {
+        transform: translateY(0%);
+    }
+    25% {
+        transform: translateY(5%);
+    }
+    50% {
+        transform: translateY(0%);
+    }
+    75% {
+        transform: translateY(5%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@mixin bounce($dur) {
+    animation-name: Bounce;
+    animation-duration: $dur;
+}
+
+@keyframes Wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@mixin wiggle($dur) {
+    animation-name: Wiggle;
+    animation-duration: $dur;
+}
+
+@keyframes Pulse {
+    0% {
+        transform: scale(1.0);
+    }
+    25% {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    75% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+@mixin pulse($dur) {
+    animation-name: Pulse;
+    animation-duration: $dur;
+}
